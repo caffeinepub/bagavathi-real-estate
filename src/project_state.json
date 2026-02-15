@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "New project",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Modern real-estate building exterior hero photo with clean architectural lines, daylight, wide composition (home-hero-building.dim_1920x1080.png)",
+  "existing_features": [
+    {
+      "id": "feature-update-the-home-page-hero-background-image-to-use-a-new-building-themed-image-instead-of-the-current-assets-screenshot-2026-02-16-030700-png",
+      "title": "Update the Home page hero background image to use a new building-themed image (instead of the current \"/assets/Screenshot 2026-02-16 030700.png\").",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-newly-generated-building-image-to-the-frontend-as-a-static-asset-under-frontend-public-assets-generated-and-reference-it-from-the-home-page-hero",
+      "title": "Add the newly generated building image to the frontend as a static asset under \"frontend/public/assets/generated\" and reference it from the Home page hero.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-text-label-our-properties-from-the-about-page-featured-image-section-while-keeping-the-rest-of-the-section-styling-layout-intact-icon-image-card-container-spacing-and-animations",
+      "title": "Remove the text label \"Our Properties\" from the About page featured image section while keeping the rest of the section styling/layout intact (icon, image, card container, spacing, and animations).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Update Home page hero image to a building picture",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Remove the name/text 'our properties' from the About page",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Update Home hero image to building and remove 'Our Properties' label on About page",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

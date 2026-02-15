@@ -1,0 +1,52 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Swap Home hero to building image and remove About 'Our Properties' label",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Update the Home page hero to use the new building-themed background image while keeping hero layout/animations/CTAs unchanged.",
+      "acceptanceCriteria": [
+        "Home page hero uses a building-themed image asset path (not \"/assets/Screenshot 2026-02-16 030700.png\").",
+        "Hero section layout, animations, and CTA buttons remain unchanged aside from the image swap."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Replace the HeroParallax imageSrc prop value from the current \"/assets/Screenshot 2026-02-16 030700.png\" to \"/assets/generated/home-hero-building.dim_1920x1080.png\" and avoid any other hero markup/styling/animation changes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add the generated building hero image as a public static asset and ensure Home references it.",
+      "acceptanceCriteria": [
+        "A new image file exists in \"frontend/public/assets/generated\" with the exact filename specified in imageRequirements.required.",
+        "The Home page references the new file via a public URL path (e.g., \"/assets/generated/...png\")."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/home-hero-building.dim_1920x1080.png",
+          "operation": "create",
+          "description": "Add the generated image asset file exactly named \"frontend/public/assets/generated/home-hero-building.dim_1920x1080.png\" (Modern real-estate building exterior hero photo, 1920x1080) so it can be referenced via a public URL path."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Remove the 'Our Properties' text label from the About page featured image section without breaking layout/styling/animations.",
+      "acceptanceCriteria": [
+        "The About page no longer displays the heading text \"Our Properties\".",
+        "The featured image section still renders correctly with consistent spacing and styling (no broken layout)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AboutPage.tsx",
+          "operation": "modify",
+          "description": "Remove the featured image section heading text node \"Our Properties\" (the h2) while keeping the rest of the section intact (icon, card container, spacing, image, and ScrollReveal/animations)."
+        }
+      ]
+    }
+  ]
+}

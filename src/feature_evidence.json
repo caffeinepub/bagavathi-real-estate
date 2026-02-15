@@ -1,0 +1,57 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-home-page-hero-background-image-to-use-a-new-building-themed-image-instead-of-the-current-assets-screenshot-2026-02-16-030700-png",
+      "featureTitle": "Update the Home page hero background image to use a new building-themed image (instead of the current \"/assets/Screenshot 2026-02-16 030700.png\").",
+      "files": [
+        "frontend/src/pages/HomePage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-newly-generated-building-image-to-the-frontend-as-a-static-asset-under-frontend-public-assets-generated-and-reference-it-from-the-home-page-hero",
+      "featureTitle": "Add the newly generated building image to the frontend as a static asset under \"frontend/public/assets/generated\" and reference it from the Home page hero.",
+      "files": [],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-remove-the-text-label-our-properties-from-the-about-page-featured-image-section-while-keeping-the-rest-of-the-section-styling-layout-intact-icon-image-card-container-spacing-and-animations",
+      "featureTitle": "Remove the text label \"Our Properties\" from the About page featured image section while keeping the rest of the section styling/layout intact (icon, image, card container, spacing, and animations).",
+      "files": [
+        "frontend/src/pages/AboutPage.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

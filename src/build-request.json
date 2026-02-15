@@ -1,0 +1,73 @@
+{
+  "kind": "build_request",
+  "title": "Update Home hero image to building and remove 'Our Properties' label on About page",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Update the Home page hero background image to use a new building-themed image (instead of the current \"/assets/Screenshot 2026-02-16 030700.png\").",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-1"
+        ],
+        "quotes": [
+          "change the home picture as buliding and remove the  name as our properties in about page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Home page hero uses a building-themed image asset path (not \"/assets/Screenshot 2026-02-16 030700.png\").",
+        "Hero section layout, animations, and CTA buttons remain unchanged aside from the image swap."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add the newly generated building image to the frontend as a static asset under \"frontend/public/assets/generated\" and reference it from the Home page hero.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-1"
+        ],
+        "quotes": [
+          "change the home picture as buliding"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new image file exists in \"frontend/public/assets/generated\" with the exact filename specified in imageRequirements.required.",
+        "The Home page references the new file via a public URL path (e.g., \"/assets/generated/...png\")."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Remove the text label \"Our Properties\" from the About page featured image section while keeping the rest of the section styling/layout intact (icon, image, card container, spacing, and animations).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "recent-1"
+        ],
+        "quotes": [
+          "remove the  name as our properties in about page"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The About page no longer displays the heading text \"Our Properties\".",
+        "The featured image section still renders correctly with consistent spacing and styling (no broken layout)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify any files under frontend/src/components/ui or any path listed in frontend.immutablePaths.",
+    "Keep all changes within the existing React + Tailwind + TanStack Router structure (no new backend services)."
+  ],
+  "nonGoals": [
+    "Changing the About page main title \"SIVAKUMAR\" or page metadata.",
+    "Changing the About page featured image itself (only remove the \"Our Properties\" label).",
+    "Any backend (Motoko) changes."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Modern real-estate building exterior hero photo with clean architectural lines, daylight, wide composition (home-hero-building.dim_1920x1080.png)"
+    ],
+    "edits": []
+  }
+}
