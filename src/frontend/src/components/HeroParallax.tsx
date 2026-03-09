@@ -1,11 +1,14 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface HeroParallaxProps {
   imageSrc: string;
   children: React.ReactNode;
 }
 
-export default function HeroParallax({ imageSrc, children }: HeroParallaxProps) {
+export default function HeroParallax({
+  imageSrc,
+  children,
+}: HeroParallaxProps) {
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -13,8 +16,8 @@ export default function HeroParallax({ imageSrc, children }: HeroParallaxProps) 
       setScrollY(window.scrollY);
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

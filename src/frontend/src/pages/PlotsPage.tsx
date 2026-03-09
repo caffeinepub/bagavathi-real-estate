@@ -1,50 +1,57 @@
-import { Filter } from 'lucide-react';
-import ScrollReveal from '../components/ScrollReveal';
-import PlotCard from '../components/PlotCard';
-import { usePageMeta } from '../hooks/usePageMeta';
+import { Filter } from "lucide-react";
+import PlotCard from "../components/PlotCard";
+import ScrollReveal from "../components/ScrollReveal";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function PlotsPage() {
   usePageMeta({
-    title: 'Plots',
-    description: 'Browse our selection of premium plots in prime locations across Coimbatore. Find the perfect land for your dream home or investment.',
+    title: "Plots",
+    description:
+      "Browse our selection of premium plots in prime locations across Coimbatore. Find the perfect land for your dream home or investment.",
   });
 
   const plots = [
     {
-      image: '/assets/generated/plot-1.dim_1200x800.png',
-      location: 'Saravanampatti, Coimbatore',
-      size: '2,400 sq ft',
-      price: '₹45 Lakhs',
+      id: "plot-1",
+      image: "/assets/generated/plot-1.dim_1200x800.png",
+      location: "Saravanampatti, Coimbatore",
+      size: "2,400 sq ft",
+      price: "\u20b945 Lakhs",
     },
     {
-      image: '/assets/generated/plot-2.dim_1200x800.png',
-      location: 'Vadavalli, Coimbatore',
-      size: '3,000 sq ft',
-      price: '₹55 Lakhs',
+      id: "plot-2",
+      image: "/assets/generated/plot-2.dim_1200x800.png",
+      location: "Vadavalli, Coimbatore",
+      size: "3,000 sq ft",
+      price: "\u20b955 Lakhs",
     },
     {
-      image: '/assets/generated/plot-3.dim_1200x800.png',
-      location: 'Peelamedu, Coimbatore',
-      size: '1,800 sq ft',
-      price: '₹38 Lakhs',
+      id: "plot-3",
+      image: "/assets/generated/plot-3.dim_1200x800.png",
+      location: "Peelamedu, Coimbatore",
+      size: "1,800 sq ft",
+      price: "\u20b938 Lakhs",
     },
     {
-      image: '/assets/generated/plot-1.dim_1200x800.png',
-      location: 'Ganapathy, Coimbatore',
-      size: '2,200 sq ft',
-      price: '₹42 Lakhs',
+      id: "plot-4",
+      image: "/assets/generated/plot-1.dim_1200x800.png",
+      location: "Ganapathy, Coimbatore",
+      size: "2,200 sq ft",
+      price: "\u20b942 Lakhs",
     },
     {
-      image: '/assets/generated/plot-2.dim_1200x800.png',
-      location: 'Singanallur, Coimbatore',
-      size: '2,800 sq ft',
-      price: '₹50 Lakhs',
+      id: "plot-5",
+      image: "/assets/generated/plot-2.dim_1200x800.png",
+      location: "Singanallur, Coimbatore",
+      size: "2,800 sq ft",
+      price: "\u20b950 Lakhs",
     },
     {
-      image: '/assets/generated/plot-3.dim_1200x800.png',
-      location: 'RS Puram, Coimbatore',
-      size: '2,000 sq ft',
-      price: '₹48 Lakhs',
+      id: "plot-6",
+      image: "/assets/generated/plot-3.dim_1200x800.png",
+      location: "RS Puram, Coimbatore",
+      size: "2,000 sq ft",
+      price: "\u20b948 Lakhs",
     },
   ];
 
@@ -54,7 +61,9 @@ export default function PlotsPage() {
         {/* Header */}
         <ScrollReveal>
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Available Plots</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Available Plots
+            </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Discover premium plots in prime locations across Coimbatore
             </p>
@@ -74,7 +83,7 @@ export default function PlotsPage() {
         {/* Plots Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {plots.map((plot, index) => (
-            <ScrollReveal key={index} delay={index * 50}>
+            <ScrollReveal key={plot.id} delay={index * 50}>
               <PlotCard {...plot} />
             </ScrollReveal>
           ))}
@@ -87,10 +96,10 @@ export default function PlotsPage() {
               Can't find what you're looking for? Contact us for more options.
             </p>
             <a
-              href="tel:9443899417"
+              href="tel:9787683497"
               className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold text-lg shadow-elevation-md hover:shadow-elevation-lg transition-all duration-300 hover:scale-105"
             >
-              Call Us: 9443899417
+              Call Us: 9787683497
             </a>
           </div>
         </ScrollReveal>

@@ -1,4 +1,4 @@
-import { MapPin, Maximize2, DollarSign } from 'lucide-react';
+import { DollarSign, MapPin, Maximize2 } from "lucide-react";
 
 interface PlotCardProps {
   image: string;
@@ -7,7 +7,12 @@ interface PlotCardProps {
   price?: string;
 }
 
-export default function PlotCard({ image, location, size, price }: PlotCardProps) {
+export default function PlotCard({
+  image,
+  location,
+  size,
+  price,
+}: PlotCardProps) {
   return (
     <div className="group relative bg-card rounded-lg overflow-hidden shadow-elevation-sm hover:shadow-elevation-md transition-all duration-300 hover:-translate-y-1">
       {/* Image */}
@@ -25,7 +30,9 @@ export default function PlotCard({ image, location, size, price }: PlotCardProps
       <div className="p-5 space-y-3">
         <div className="flex items-start gap-2">
           <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-          <h3 className="font-semibold text-lg text-card-foreground">{location}</h3>
+          <h3 className="font-semibold text-lg text-card-foreground">
+            {location}
+          </h3>
         </div>
 
         <div className="flex items-center gap-2 text-muted-foreground">

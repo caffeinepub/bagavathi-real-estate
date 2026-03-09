@@ -1,31 +1,35 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
-import ScrollReveal from '../components/ScrollReveal';
-import { usePageMeta } from '../hooks/usePageMeta';
+import { Mail, MapPin, Phone } from "lucide-react";
+import ScrollReveal from "../components/ScrollReveal";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function ContactPage() {
   usePageMeta({
-    title: 'Contact Us',
-    description: 'Get in touch with Bagavathi Real Estate. Visit us in Coimbatore or contact us via phone or email.',
+    title: "Contact Us",
+    description:
+      "Get in touch with Rishi Real Estate. Visit us in Coimbatore or contact us via phone or email.",
   });
 
   const contactInfo = [
     {
       icon: MapPin,
-      title: 'Address',
-      content: 'Coimbatore, Tamil Nadu',
+      title: "Address",
+      content: "Coimbatore, Tamil Nadu",
       link: null,
+      delay: 0,
     },
     {
       icon: Phone,
-      title: 'Phone',
-      content: '9443899417',
-      link: 'tel:9443899417',
+      title: "Phone",
+      content: "9787683497",
+      link: "tel:9787683497",
+      delay: 100,
     },
     {
       icon: Mail,
-      title: 'Email',
-      content: 'bagavathi885@gmail.com',
-      link: 'mailto:bagavathi885@gmail.com',
+      title: "Email",
+      content: "rishikesh042004@gmail.com",
+      link: "mailto:rishikesh042004@gmail.com",
+      delay: 200,
     },
   ];
 
@@ -37,15 +41,16 @@ export default function ContactPage() {
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We're here to help you find your perfect property. Reach out to us today!
+              We're here to help you find your perfect property. Reach out to us
+              today!
             </p>
           </div>
         </ScrollReveal>
 
         {/* Contact Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {contactInfo.map((info, index) => (
-            <ScrollReveal key={index} delay={index * 100}>
+          {contactInfo.map((info) => (
+            <ScrollReveal key={info.title} delay={info.delay}>
               <div className="bg-card p-8 rounded-xl shadow-elevation-sm hover:shadow-elevation-md transition-all duration-300 hover:-translate-y-1 text-center">
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <info.icon className="w-8 h-8 text-primary" />
@@ -59,7 +64,9 @@ export default function ContactPage() {
                     {info.content}
                   </a>
                 ) : (
-                  <p className="text-muted-foreground text-lg">{info.content}</p>
+                  <p className="text-muted-foreground text-lg">
+                    {info.content}
+                  </p>
                 )}
               </div>
             </ScrollReveal>
@@ -102,13 +109,13 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:9443899417"
+                href="tel:9787683497"
                 className="inline-block px-8 py-4 bg-white text-primary rounded-lg font-semibold text-lg shadow-elevation-md hover:shadow-elevation-lg transition-all duration-300 hover:scale-105"
               >
                 Call Now
               </a>
               <a
-                href="mailto:bagavathi885@gmail.com"
+                href="mailto:rishikesh042004@gmail.com"
                 className="inline-block px-8 py-4 bg-white/10 text-white border-2 border-white rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
                 Send Email

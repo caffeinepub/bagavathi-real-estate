@@ -1,8 +1,8 @@
-import { MessageCircle, Phone } from 'lucide-react';
-import { Link } from '@tanstack/react-router';
+import { Link } from "@tanstack/react-router";
+import { MessageCircle, Phone } from "lucide-react";
 
 export default function FloatingContactButtons() {
-  const whatsappNumber = '9443899417';
+  const whatsappNumber = "9443899417";
   const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
   return (

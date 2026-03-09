@@ -1,15 +1,18 @@
-import { Heart } from 'lucide-react';
-import { SiFacebook, SiInstagram, SiX, SiLinkedin } from 'react-icons/si';
+import { Heart } from "lucide-react";
+import { SiFacebook, SiInstagram, SiLinkedin, SiX } from "react-icons/si";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const appIdentifier = typeof window !== 'undefined' ? window.location.hostname : 'bagavathi-real-estate';
+  const appIdentifier =
+    typeof window !== "undefined"
+      ? window.location.hostname
+      : "rishi-real-estate";
 
   const socialLinks = [
-    { icon: SiFacebook, href: '#', label: 'Facebook' },
-    { icon: SiInstagram, href: '#', label: 'Instagram' },
-    { icon: SiX, href: '#', label: 'X (Twitter)' },
-    { icon: SiLinkedin, href: '#', label: 'LinkedIn' },
+    { icon: SiFacebook, href: "#", label: "Facebook" },
+    { icon: SiInstagram, href: "#", label: "Instagram" },
+    { icon: SiX, href: "#", label: "X (Twitter)" },
+    { icon: SiLinkedin, href: "#", label: "LinkedIn" },
   ];
 
   return (
@@ -18,7 +21,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Copyright */}
           <div className="text-sm text-muted-foreground text-center md:text-left">
-            © {currentYear} Bagavathi Real Estate | Powered by Deepak
+            © {currentYear} Rishi Real Estate
           </div>
 
           {/* Social Links */}
@@ -37,7 +40,8 @@ export default function Footer() {
 
           {/* Attribution */}
           <div className="text-sm text-muted-foreground flex items-center gap-1">
-            Built with <Heart className="w-4 h-4 text-accent fill-accent" /> using{' '}
+            Built with <Heart className="w-4 h-4 text-accent fill-accent" />{" "}
+            using{" "}
             <a
               href={`https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(appIdentifier)}`}
               target="_blank"

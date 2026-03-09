@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 interface ScrollRevealProps {
   children: React.ReactNode;
@@ -6,7 +6,11 @@ interface ScrollRevealProps {
   className?: string;
 }
 
-export default function ScrollReveal({ children, delay = 0, className = '' }: ScrollRevealProps) {
+export default function ScrollReveal({
+  children,
+  delay = 0,
+  className = "",
+}: ScrollRevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -19,7 +23,7 @@ export default function ScrollReveal({ children, delay = 0, className = '' }: Sc
           }, delay);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (ref.current) {
@@ -37,7 +41,7 @@ export default function ScrollReveal({ children, delay = 0, className = '' }: Sc
     <div
       ref={ref}
       className={`transition-all duration-700 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       } ${className}`}
     >
       {children}

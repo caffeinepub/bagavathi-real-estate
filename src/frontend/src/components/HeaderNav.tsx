@@ -1,7 +1,7 @@
-import { Link, useRouterState } from '@tanstack/react-router';
-import { Building2, Menu, X } from 'lucide-react';
-import { useState } from 'react';
-import ThemeToggle from './ThemeToggle';
+import { Link, useRouterState } from "@tanstack/react-router";
+import { Building2, Menu, X } from "lucide-react";
+import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 export default function HeaderNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -9,11 +9,11 @@ export default function HeaderNav() {
   const currentPath = router.location.pathname;
 
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
-    { path: '/plots', label: 'Plots' },
-    { path: '/buildings', label: 'Buildings' },
-    { path: '/contact', label: 'Contact Us' },
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About Us" },
+    { path: "/plots", label: "Plots" },
+    { path: "/buildings", label: "Buildings" },
+    { path: "/contact", label: "Contact Us" },
   ];
 
   const isActive = (path: string) => currentPath === path;
@@ -29,9 +29,11 @@ export default function HeaderNav() {
             </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold text-foreground leading-tight">
-                Bagavathi Real Estate
+                Rishi Real Estate
               </span>
-              <span className="text-xs text-muted-foreground">Powered by Deepak</span>
+              <span className="text-xs text-muted-foreground">
+                Trusted Properties in Coimbatore
+              </span>
             </div>
           </Link>
 
@@ -43,8 +45,8 @@ export default function HeaderNav() {
                 to={link.path}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   isActive(link.path)
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-foreground hover:bg-secondary hover:text-secondary-foreground'
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-secondary hover:text-secondary-foreground"
                 }`}
               >
                 {link.label}
@@ -57,11 +59,16 @@ export default function HeaderNav() {
           <div className="flex md:hidden items-center space-x-2">
             <ThemeToggle />
             <button
+              type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-2 rounded-md text-foreground hover:bg-secondary"
               aria-label="Toggle menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
         </div>
@@ -76,8 +83,8 @@ export default function HeaderNav() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`block px-4 py-2 rounded-md text-sm font-medium transition-all ${
                   isActive(link.path)
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-foreground hover:bg-secondary'
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-secondary"
                 }`}
               >
                 {link.label}

@@ -1,6 +1,6 @@
-import { Moon, Sun } from 'lucide-react';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
@@ -12,7 +12,11 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button className="p-2 rounded-md" aria-label="Toggle theme">
+      <button
+        type="button"
+        className="p-2 rounded-md"
+        aria-label="Toggle theme"
+      >
         <Sun className="w-5 h-5" />
       </button>
     );
@@ -20,11 +24,12 @@ export default function ThemeToggle() {
 
   return (
     <button
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      type="button"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
       className="p-2 rounded-md text-foreground hover:bg-secondary transition-all duration-200 hover:scale-105"
       aria-label="Toggle theme"
     >
-      {theme === 'dark' ? (
+      {theme === "dark" ? (
         <Sun className="w-5 h-5" />
       ) : (
         <Moon className="w-5 h-5" />
